@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    android:background="#1a1a2e">
+
+    <!-- Status bar (waiting / game ID / messages) -->
+
+    <!-- Cards row -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Connecting..."
+        android:textColor="#a0a0b0"
+        android:textSize="20sp"
+        android:textIsSelectable="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginBottom="24dp">
+
+        <!-- Player 1 card -->
+        <TextView
+            android:id="@+id/tvPlayer1Card"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="P1\n—"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="#16213e"
+            android:padding="12dp"/>
+
+        <!-- Player 2 card -->
+        <TextView
+            android:id="@+id/tvPlayer2Card"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="P2\n—"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="#16213e"
+            android:padding="12dp"/>
+
+    </LinearLayout>
+
+    <!-- Round result -->
+    <TextView
+        android:id="@+id/tvRoundResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Round result appears here"
+        android:textSize="18sp"
+        android:textColor="#e94560"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Score / remaining cards -->
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Score — P1: 0  |  P2: 0  |  Cards left: 52"
+        android:textSize="14sp"
+        android:textColor="#a0a0b0"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Next Round button -->
+    <Button
+        android:id="@+id/btnNextRound"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:backgroundTint="#e94560"
+        android:text="⚔️  NEXT ROUND"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+</LinearLayout>
